@@ -3836,14 +3836,14 @@ declare namespace StripeNode {
           /**
            * The card number
            */
-          number: number;
+          number: string;
 
           /**
            * Card brand. Can be Visa, American Express, MasterCard, Discover, JCB, Diners Club, or Unknown.
            */
           brand: "Visa" | "American Express" | "MasterCard" | "Discover" | "JCB" | "Diners Club" | "Unknown" ;
-          exp_month: number;
-          exp_year: number;
+          exp_month: string;
+          exp_year: string;
 
           /**
            * Card funding type. Can be credit, debit, prepaid, or unknown
@@ -3924,8 +3924,8 @@ declare namespace StripeNode {
            */
           default_for_currency?: boolean;
 
-          exp_month?: number;
-          exp_year?: number;
+          exp_month?: string;
+          exp_year?: string;
 
           /**
            * Cardholder name
@@ -3942,17 +3942,17 @@ declare namespace StripeNode {
           /**
            * Two digit number representing the card's expiration month.
            */
-          exp_month: number;
+          exp_month: string;
 
           /**
            * Two or four digit number representing the card's expiration year.
            */
-          exp_year: number;
+          exp_year: string;
 
           /**
            * The card number, as a string without any separators.
            */
-          number: number;
+          number: string;
 
           /**
            * Card security code. Required unless your account is registered in
