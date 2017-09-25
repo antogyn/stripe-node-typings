@@ -4100,12 +4100,12 @@ declare namespace StripeNode {
           trial_start: number;
       }
 
-      interface ISubscriptionCustCreationOptions extends IDataOptionsWithMetadata {
-          /**
-           * The identifier of the plan to subscribe the customer to.
-           */
+      interface ISubscriptionItemOptions {
           plan: string;
+          quantity?: number;
+      }
 
+      interface ISubscriptionCustCreationOptions extends IDataOptionsWithMetadata {
           /**
            * A positive decimal (with at most two decimal places) between 1 and 100. This represents the percentage of the subscription invoice
            * subtotal that will be transferred to the application owner’s Stripe account. The request must be made with an OAuth key in order
@@ -4118,6 +4118,8 @@ declare namespace StripeNode {
            * particular subscription.
            */
           coupon?: string;
+
+          items?: ISubscriptionItemOptions[];
 
           source?: sources.ISourceCreationOptions;
 
